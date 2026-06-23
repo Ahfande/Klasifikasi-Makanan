@@ -1,0 +1,747 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+    font-family: 'Montserrat';
+}
+
+.headerContainer {
+    width: 100%;
+    height: 640px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    background: linear-gradient(rgba(98, 129, 65, 0.9), rgba(98, 129, 65, 0.774)), url('https://images.unsplash.com/photo-1490818387583-1baba5e638af?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.headerContainer::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.1));
+}
+
+h1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Montserrat';
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: 800;
+    text-align: center;
+    padding-top: 60px;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    letter-spacing: 0.5px;
+}
+
+h1 span {
+    font-size: 28px;
+    margin: 10px 0;
+    font-weight: 600;
+}
+
+h6 {
+    width: 80%;
+    max-width: 800px;
+    text-align: center;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 300;
+    font-family: 'Montserrat',  ;
+    margin: 30px auto;
+    line-height: 1.8;
+    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.BoxJenisMakanan {
+    width: 90%;
+    max-width: 700px;
+    height: 250px;
+    background-color: rgba(217, 217, 217, 0.8);
+    backdrop-filter: blur(5px);
+    margin: 0 auto;
+    border-radius: 20px;
+    padding: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    position: relative;
+    top: 30px;
+}
+
+h3 {
+    text-align: center;
+    font-family: 'Poppins' ;
+    color: #628141;
+    font-size: 19px;
+    padding-top: 10px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.BoxMakanan {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px;
+    gap: 12px;
+    justify-content: center;
+}
+
+.jenisMakanan {
+    text-align: center;
+    width: 110px;
+    height: 42px;
+    border-radius: 25px;
+    background-color: #016B61;
+    font-family: 'Poppins',  ;
+    font-size: 13px;
+    color: #ffffff;
+    font-weight: 600;
+    padding: 8px 5px;
+    cursor: default;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    box-shadow: 0 3px 8px rgba(1, 107, 97, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.jenisMakanan:hover {
+    background-color: #628141;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(98, 129, 65, 0.3);
+    border-color: #ffffff;
+}
+
+.jenisMakanan:active {
+    transform: translateY(0);
+}
+
+.jenisMakanan.bubur-kacang {
+    font-size: 12px;
+    padding-top: 1px
+}
+
+.Container {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin: 80px auto;
+    max-width: 1400px;
+    padding: 0 20px;
+}
+
+.BoxContainer {
+    width: 100%;
+    max-width: 600px;
+    background-color: #ffffff;
+    margin: 0;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(31, 30, 30, 0.1);
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.BoxContainer:hover {
+    box-shadow: 0 15px 40px rgba(31, 30, 30, 0.15);
+    transform: translateY(-5px);
+}
+
+.BoxUnggah-Informasi {
+    width: 90%;
+    max-width: 550px;
+    margin: 25px auto;
+    padding: 5px;
+}
+
+.JudulContainer {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 17px;
+    font-family: 'Poppins',  ;
+    font-weight: 700;
+    color: #628141;
+    margin-bottom: 10px;
+}
+
+.JudulContainer i {
+    font-size: 35px;
+    transition: transform 0.3s ease;
+}
+
+.JudulContainer:hover i {
+    transform: scale(1.1);
+}
+
+.garisBawah {
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to right, #628141, #016B61);
+    margin-top: 8px;
+    border-radius: 2px;
+}
+
+.informasiUpload {
+    width: 100%;
+    height: auto;
+    min-height: 150px;
+    background-color: #f0f0f0;
+    margin-top: 25px;
+    border-radius: 10px;
+    border-left: 7px solid #628141;
+    padding: 15px;
+    transition: all 0.3s ease;
+}
+
+.informasiUpload:hover {
+    background-color: #e8e8e8;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+h4 {
+    font-family: 'Poppins',  ;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+h4 i {
+    margin-right: 10px;
+    font-size: 24px;
+}
+
+.informasiUpload p {
+    font-size: 14px;
+    color: #444;
+    font-family: 'Montserrat',  ;
+    font-weight: 500;
+    text-align: left;
+    margin: 10px 0 0 5px;
+    line-height: 1.7;
+}
+
+.UploadGambar {
+    width: 100%;
+    height: 310px;
+    background-color: transparent;
+    border: 3px dashed #628141;
+    margin-top: 45px;
+    border-radius: 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.UploadGambar:hover {
+    background-color: rgba(98, 129, 65, 0.05);
+    border-color: #016B61;
+    border-style: solid;
+    transform: scale(1.01);
+}
+
+.UploadGambar.dragover {
+    background-color: rgba(98, 129, 65, 0.15);
+    border-color: #016B61;
+    border-style: solid;
+}
+
+h5 {
+    font-size: 22px;
+    font-family: 'Montserrat',  ;
+    font-weight: 700;
+    color: #628141;
+    margin-bottom: 15px;
+    transition: color 0.3s ease;
+}
+
+h5 i {
+    font-size: 45px;
+    margin-bottom: 15px;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.UploadGambar:hover h5 i {
+    transform: translateY(-5px);
+}
+
+.UploadGambar p {
+    font-size: 14px;
+    color: #666;
+    font-family: 'Montserrat',  ;
+    font-weight: 400;
+    margin-top: 10px;
+    line-height: 1.6;
+}
+
+.PilihFile {
+    width: 160px;
+    height: 50px;
+    border: none;
+    background-color: #628141;
+    border-radius: 12px;
+    color: #ffffff;
+    font-family: 'Montserrat',  ;
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    box-shadow: 0 4px 12px rgba(98, 129, 65, 0.3);
+}
+
+.PilihFile:hover {
+    background-color: #016B61;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(98, 129, 65, 0.4);
+}
+
+.PilihFile:active {
+    transform: translateY(0);
+}
+
+.ButtonUnggahContainer {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.Konfirmasi {
+    width: 220px;
+    height: 55px;
+    border: none;
+    background-color: #628141;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: 'Montserrat',  ;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    box-shadow: 0 4px 12px rgba(98, 129, 65, 0.3);
+}
+
+.Konfirmasi:hover {
+    background-color: #016B61;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(1, 107, 97, 0.4);
+}
+
+.Konfirmasi:active {
+    transform: translateY(0);
+}
+
+.Reset {
+    width: 150px;
+    height: 55px;
+    border: none;
+    background-color: #C40C0C;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: 'Montserrat',  ;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    box-shadow: 0 4px 12px rgba(196, 12, 12, 0.3);
+}
+
+.Reset:hover {
+    background-color: #a50909;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(196, 12, 12, 0.4);
+}
+
+.Reset:active {
+    transform: translateY(0);
+}
+
+.preview-container {
+    text-align: center;
+    margin: 25px 0 15px;
+    font-family: 'Montserrat',  ;
+}
+
+.image-preview {
+    max-width: 100%;
+    max-height: 280px;
+    border-radius: 12px;
+    margin: 10px auto 15px;
+    display: none;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    border: 3px solid #628141;
+    object-fit: contain;
+}
+
+.loading {
+    display: none;
+    text-align: center;
+    padding: 30px;
+}
+
+.loading-spinner {
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #628141;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 20px;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.error-message {
+    background-color: #ffebee;
+    color: #c62828;
+    padding: 18px;
+    border-radius: 10px;
+    margin-top: 20px;
+    display: none;
+    border-left: 5px solid #c62828;
+    font-family: 'Montserrat',  ;
+    font-weight: 500;
+    animation: shake 0.5s ease;
+}
+
+@keyframes shake {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-5px);
+    }
+
+    75% {
+        transform: translateX(5px);
+    }
+}
+
+/* Informasi Gizi */
+.informasiSumberGizi {
+    width: 100%;
+    height: auto;
+    min-height: 290px;
+    background-color: #f0f0f0;
+    margin-top: 25px;
+    border-radius: 10px;
+    border-left: 7px solid #628141;
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+
+.informasiSumberGizi:hover {
+    background-color: #e8e8e8;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.informasiSumberGizi p {
+    font-size: 13px;
+    color: #444;
+    font-family: 'Montserrat',  ;
+    font-weight: 500;
+    text-align: left;
+    margin: 10px 0 0 0;
+    line-height: 1.7;
+}
+
+.TabelContainer {
+    width: 100%;
+    height: auto;
+    min-height: 390px;
+    background-color: #EFEFEF;
+    margin-top: 20px;
+    border-radius: 15px;
+    padding: 20px;
+    display: none;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.TabelContainer h7 {
+    font-size: 22px;
+    color: #628141;
+    font-family: 'Montserrat',  ;
+    font-weight: 700;
+    /* margin-bottom: 15px; */
+    display: block;
+}
+
+h8 {
+    font-size: 20px;
+    color: #628141;
+    font-family: 'Montserrat',  ;
+    font-weight: 700;
+    margin-top: -20px;
+    display: block;
+}
+
+h9 {
+    font-size: 20px;
+    color: #333;
+    font-family: 'Montserrat',  ;
+    font-weight: 600;
+    margin: 20px 0 15px;
+    display: block;
+}
+
+.noDeteksi {
+    font-family: 'Montserrat',  ;
+    margin: 30px 0;
+    text-align: center;
+    padding: 30px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    border: 2px dashed #ccc;
+    color: #666;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Performa Model */
+#performaModel {
+    background-color: #f8f9fa;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-family: monospace;
+    font-size: 12px;
+    border-left: 3px solid #628141;
+    margin: 5px 0;
+}
+
+.performa-tooltip {
+    cursor: help;
+    border-bottom: 1px dashed #628141;
+}
+
+.tabelGizi {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Montserrat',  ;
+    margin: 20px 0;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05);
+}
+
+thead {
+    background: linear-gradient(135deg, #628141, #016B61);
+    font-weight: 600;
+    color: #ffffff;
+    height: 50px;
+}
+
+thead tr {
+    height: 50px;
+}
+
+tbody {
+    color: #333;
+    text-align: left;
+    font-size: 16px;
+}
+
+.tabelGizi th,
+.tabelGizi td {
+    padding: 15px 20px;
+    border-bottom: 1px solid #ddd;
+    transition: background-color 0.2s ease;
+}
+
+.tabelGizi tbody tr {
+    transition: all 0.3s ease;
+}
+
+.tabelGizi tbody tr:hover {
+    background-color: rgba(98, 129, 65, 0.1);
+    transform: translateX(5px);
+}
+
+.tabelGizi tbody tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+.tabelGizi tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .Container {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .BoxContainer {
+        max-width: 700px;
+    }
+}
+
+@media (max-width: 768px) {
+    .headerContainer {
+        height: auto;
+        padding-bottom: 50px;
+    }
+
+    h1 {
+        font-size: 24px;
+        padding: 40px 20px 0;
+    }
+
+    h6 {
+        font-size: 16px;
+        width: 90%;
+    }
+
+    .BoxJenisMakanan {
+        width: 95%;
+        height: auto;
+        padding-bottom: 20px;
+    }
+
+    .BoxMakanan {
+        gap: 8px;
+    }
+
+    .jenisMakanan {
+        width: 100px;
+        height: 38px;
+        font-size: 12px;
+    }
+
+    .Container {
+        margin: 50px auto;
+        padding: 0 15px;
+    }
+
+    .ButtonUnggahContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .Konfirmasi,
+    .Reset {
+        width: 90%;
+        max-width: 300px;
+    }
+
+    .jenisMakanan.bubur-kacang {
+        font-size: 11px;
+        padding: 7px 3px;
+        line-height: 1.2;
+        word-spacing: -0.5px;
+    }
+
+    .UploadGambar {
+        height: 400px;
+    }
+
+    .tabelGizi {
+        width: 100%;
+        font-size: 14px;
+        display: block;
+        overflow-x: auto;
+    }
+
+    .tabelGizi th,
+    .tabelGizi td {
+        padding: 8px 10px;
+        font-size: 12px;
+        white-space: nowrap;
+    }
+
+    .tabelGizi thead {
+        font-size: 13px;
+    }
+
+
+    .loading-spinner {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 20px;
+    }
+
+    h6 {
+        font-size: 14px;
+    }
+
+    .jenisMakanan {
+        width: 85px;
+        height: 36px;
+        font-size: 11px;
+    }
+
+    .JudulContainer {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .tabelGizi th,
+    .tabelGizi td {
+        padding: 10px;
+        font-size: 14px;
+    }
+}
